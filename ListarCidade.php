@@ -19,6 +19,8 @@
             <th>Código</th>
             <th>Nome</th>
             <th>Estado</th>
+            <th>Alterar</th>
+            <th>Deletar</th>
         </tr>
         <?php //mysqli_fetch_array lê uma linha por vez
             while($row = mysqli_fetch_array($result)){
@@ -26,6 +28,10 @@
                 echo "<td>".$row['id']."</td>";
                 echo "<td>".$row['nome']."</td>";
                 echo "<td>".$row['estado']."</td>";
+                echo "<td><a href='alteraCidade.php?id="
+                .$row['id']."'>Alterar</a></td>";
+                echo "<td><a href='deletaCidade.php?id="
+                .$row['id']."'>Deletar</a></td>";
                 echo "</tr>";
             }
         ?>
